@@ -2,14 +2,14 @@ var forca = 0
 
 function on() {
   document.getElementById("lamp").src="Lon.png"
-  forca = getRndInterger(200, 1000)
-  setTimeout(sendToServer(forca), 1000)
+  var forca = getRndInterger(300, 1000)
+  setTimeout(sendToServer(forca), 300)
 }
 
 function off() {
   document.getElementById("lamp").src="Loff.png"
-  forca = 0
-  setTimeout(sendToServer(forca), 1000)
+  var forca = 0
+  setTimeout(sendToServer(forca),300 )
 }
 
 function blink() {
@@ -25,11 +25,11 @@ function blink() {
 }
 
 function sendToServer(state) {
-  var KEY = "4JOC78UH2DJHM9L5"
+  var KEY = "EAOAKLA49YT6Y8VX"
 
   const http = new XMLHttpRequest()
 
-  http.open("GET", "https://api.thingspeak.com/update?api_key="+ KEY +" &field1 =0"+ state)
+  http.open("GET", "https://api.thingspeak.com/update?api_key="+ KEY +"&field1=0"+ state)
   http.send()
   http.onload = console.log(http.responseText+" "+state)
 }
