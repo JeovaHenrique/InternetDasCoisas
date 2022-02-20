@@ -1,5 +1,6 @@
 body {
-  background-color: #0fF;
+  background-color: rgba(167, 229, 248, 0.781);
+ justify-content: center;
 }
 
 #result {

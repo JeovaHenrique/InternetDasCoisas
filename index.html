@@ -3,17 +3,23 @@
 
   <head>
     <meta charset="utf-8">
-    <title>Listas de Exercicio</title>
+    <title>Controlador de lâmpada</title>
   </head>
   <link rel="stylesheet" type="text/css" href="estilo.css">
 
   <body>
-    <a href="exercicios.html">
-    <h3>lista 3</h3>
-  </a>
-    <a href="dashboard.html">
-      <h3>lista 4</h3>
-      </a>
+    <div class="container">
+      <h1>Simulador de um sensor para captar luz </h1>
+      <img src="Loff.png" alt="lâmpada" id="lamp" id="demo">
+      <form>
+        <input type="button" value="ON" onclick="on()" >
+        <input type="button" value="OFF" onclick="off()">
+        <input type="button" value="BLINK" onclick="blink()">
+      </form>
+      <iframe width = "450" height = "260" style = "border: 1px solid #cccccc;" src = "https://thingspeak.com/channels/1612742/charts/1?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15"> </iframe>
+    </div>
+
+    <script src="dash.js"></script>
   </body>
 
 </html>
